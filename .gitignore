@@ -1,0 +1,8 @@
+# .vscode
+/.vscode/
+
+# style.css.map
+*.css.map
+
+# img
+/img/
