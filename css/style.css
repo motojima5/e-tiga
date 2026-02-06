@@ -215,9 +215,19 @@ body {
     max-width: 1150px;
   }
 }
+.mv__picture {
+  margin: 0 auto;
+  max-width: 398px;
+}
 @media screen and (min-width: 768px) {
   .mv__picture {
+    margin: 0;
     max-width: 650px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mv__picture img {
+    width: 650px;
   }
 }
 .mv__container {

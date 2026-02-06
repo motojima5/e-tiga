@@ -241,8 +241,18 @@ body {
   }
 
   &__picture {
+    margin: 0 auto;
+    max-width: 398px;
+
     @media screen and (min-width: 768px) {
+      margin: 0;
       max-width: 650px;
+    }
+
+    img {
+      @media screen and (min-width: 768px) {
+        width: 650px;
+      }
     }
   }
 
