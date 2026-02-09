@@ -601,6 +601,136 @@ body {
   }
 }
 
+// price
+.price {
+  padding: 60px 0;
+  background: #F4FBFF;
+
+  @media screen and (min-width: 768px) {
+    padding: 100px 0;
+  }
+
+  &__inner {
+    padding: 0 15px;
+
+    @media screen and (min-width: 768px) {
+      margin: 0 auto;
+      max-width: calc(959px + 15px * 2);
+    }
+  }
+
+  &__title {
+    margin-left: calc(30px - 15px);
+
+    .title__ja {
+      margin-top: 3px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 46px;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 15px;
+    }
+  }
+
+  &__card {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+
+    &:nth-child(n + 2) {
+      .price-card__price::before,
+      .price-card__price::after {
+        position: absolute;
+        bottom: 3px;
+        font-size: 16px;
+        line-height: $line-height-base;
+        color: #333;
+      }
+      .price-card__price::before {
+        content: "月";
+        left: -19px;
+      }
+      .price-card__price::after {
+        content: "円";
+        right: -21px;
+      }
+    }
+  }
+}
+
+.price-card {
+  margin: 0 auto;
+  padding: 30px 15px;
+  max-width: 300px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+
+  &__plan {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    color: #2392DB;
+  }
+
+  &__price {
+    position: relative;
+    margin: 10px auto 0;
+    width: fit-content;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 48px;
+    letter-spacing: 0.1em;
+    color: #2392DB;
+  }
+
+  &__unit {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  &__table {
+    margin: 30px auto 0;
+    width: 100%;
+    max-width: 261px;
+    // table-layout: fixed;
+    border-collapse: collapse;
+
+    tr {
+      border-bottom: 1px solid #C2C2C2;
+    }
+
+    th,
+    td {
+      height: 39px;
+      vertical-align: middle;
+    }
+
+    th {
+      padding-left: 12px;
+      text-align: left;
+    }
+
+    td {
+      padding-right: 12px;
+      text-align: right;
+    }
+  }
+
+  &__button {
+    margin-top: 30px;
+    margin-left: 6px;
+  }
+}
+
 // blog
 .blog {
   padding: 60px 0;

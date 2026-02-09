@@ -545,6 +545,120 @@ body {
   }
 }
 
+.price {
+  padding: 60px 0;
+  background: #F4FBFF;
+}
+@media screen and (min-width: 768px) {
+  .price {
+    padding: 100px 0;
+  }
+}
+.price__inner {
+  padding: 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .price__inner {
+    margin: 0 auto;
+    max-width: 989px;
+  }
+}
+.price__title {
+  margin-left: 15px;
+}
+.price__title .title__ja {
+  margin-top: 3px;
+}
+.price__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 46px;
+}
+@media screen and (min-width: 768px) {
+  .price__cards {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+  }
+}
+.price__card {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+}
+.price__card:nth-child(n+2) .price-card__price::before,
+.price__card:nth-child(n+2) .price-card__price::after {
+  position: absolute;
+  bottom: 3px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}
+.price__card:nth-child(n+2) .price-card__price::before {
+  content: "月";
+  left: -19px;
+}
+.price__card:nth-child(n+2) .price-card__price::after {
+  content: "円";
+  right: -21px;
+}
+
+.price-card {
+  margin: 0 auto;
+  padding: 30px 15px;
+  max-width: 300px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+}
+.price-card__plan {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: normal;
+  color: #2392DB;
+}
+.price-card__price {
+  position: relative;
+  margin: 10px auto 0;
+  width: fit-content;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 48px;
+  letter-spacing: 0.1em;
+  color: #2392DB;
+}
+.price-card__unit {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.price-card__table {
+  margin: 30px auto 0;
+  width: 100%;
+  max-width: 261px;
+  border-collapse: collapse;
+}
+.price-card__table tr {
+  border-bottom: 1px solid #C2C2C2;
+}
+.price-card__table th,
+.price-card__table td {
+  height: 39px;
+  vertical-align: middle;
+}
+.price-card__table th {
+  padding-left: 12px;
+  text-align: left;
+}
+.price-card__table td {
+  padding-right: 12px;
+  text-align: right;
+}
+.price-card__button {
+  margin-top: 30px;
+  margin-left: 6px;
+}
+
 .blog {
   padding: 60px 0;
 }
