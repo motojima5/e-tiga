@@ -16,6 +16,35 @@ body {
   color: $color-base;
 }
 
+.title {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-left: calc(80px - 47px);
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-left: 0;
+  }
+
+  &__en {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: $font-family-en;
+    letter-spacing: 0.1em;
+    color: #228DDD;
+  }
+
+  &__ja {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0.19em;
+    color: #228BDE;
+  }
+}
+
 .button {
   display: inline-block;
   padding: 9px 52px;
@@ -701,4 +730,150 @@ body {
   }
 
   &__link {}
+}
+
+// seminar
+.seminar {
+  padding: 60px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 100px 0;
+  }
+
+  &__inner {
+    padding: 0 15px;
+
+    @media screen and (min-width: 768px) {
+      margin: 0 auto;
+      padding: 0 40px;
+      max-width: calc(1080px + 40px * 2);
+    }
+  }
+
+  &__title {
+    margin-left: calc(30px - 15px);
+
+    @media screen and (min-width: 768px) {
+      margin-left: 0;
+    }
+
+    .title__ja {
+      margin-top: 2px;
+    }
+  }
+
+  &__boxes {
+    margin-top: 47px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 38px;
+    }
+  }
+
+  &__box {
+    &+& {
+      margin-top: 38px;
+
+      @media screen and (min-width: 768px) {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 46px;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 40px;
+    }
+  }
+}
+
+.seminar-box {
+  padding: 24px 12px 30px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 5px 7px 34px 0 #f1f1f1;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    padding: 24px;
+  }
+
+  &__image {
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      width: calc(324px / 1032px * 100%);
+    }
+
+    img {
+      width: 324px;
+    }
+  }
+
+  &__content {
+    @media screen and (min-width: 768px) {
+      width: calc(678px / 1032px * 100%);
+    }
+  }
+
+  &__meta {
+    display: flex;
+    gap: 10px;
+    margin-top: 21px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+    }
+  }
+
+  &__column {
+    padding: 6px 12px 5px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    background: #2392db;
+    border-radius: 2px;
+  }
+
+  &__date {
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__head {
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__text {
+    margin-top: 13px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__button {
+    margin-top: 25px;
+    text-align: right;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 20px;
+    }
+
+    a {
+      display: inline-block;
+      padding: calc(8px - 1px) calc(44px - 1px);
+      font-size: 14px;
+      font-weight: 500;
+      color: #2392DB;
+      border: 1px solid currentColor;
+      border-radius: 2px;
+    }
+  }
 }
