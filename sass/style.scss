@@ -331,6 +331,7 @@ body {
       max-width: calc(930px + 40px * 2);
     }
   }
+
   &__title {
     position: relative;
     margin-bottom: 47px;
@@ -359,6 +360,7 @@ body {
       transform: translateX(-50%);
     }
   }
+
   &__lists {
     margin-bottom: 45px;
 
@@ -366,7 +368,9 @@ body {
       margin-bottom: 25px;
     }
   }
+
   &__list {}
+
   &__more {
     display: flex;
     flex-direction: column;
@@ -377,7 +381,9 @@ body {
       justify-content: space-between;
     }
   }
+
   &__pagination {}
+
   &__link {
     text-align: center;
 
@@ -413,10 +419,12 @@ body {
       margin-bottom: -1px;
     }
   }
+
   &:nth-child(n + 2) {
     padding-top: calc(12px - 1px);
     border-top: 1px solid #e3e3e3;
   }
+
   &:last-child {
     padding-bottom: calc(12px - 1px);
     border-bottom: 1px solid #e3e3e3;
@@ -432,6 +440,7 @@ body {
       font-size: 16px;
     }
   }
+
   &__title {
     font-size: 15px;
     color: #111;
@@ -464,9 +473,11 @@ body {
     background: #fff;
     border: 1px solid #828282;
   }
+
   &__prev {
     &-path {}
   }
+
   &__num {
     font-size: 18px;
     font-weight: 500;
@@ -479,8 +490,85 @@ body {
       background: #228DDD;
     }
   }
+
   &__next {
     &-path {}
+  }
+}
+
+// concept
+.concept {
+  padding: 60px 0;
+  background: #F4FBFF;
+
+  @media screen and (min-width: 768px) {
+    padding: 100px 0;
+  }
+
+  &__inner {
+    padding: 0 20px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      margin: 0 auto;
+      padding: 0 40px;
+      max-width: calc(980px + 40px * 2);
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+    max-width: 310px;
+
+    @media screen and (min-width: 768px) {
+      flex: 1;
+      margin: 0;
+      max-width: 450px;
+    }
+  }
+
+  &__img {}
+
+  &__container {
+    margin-top: 30px;
+
+    @media screen and (min-width: 768px) {
+      flex: 1;
+      margin-top: 2px;
+      max-width: 450px;
+    }
+  }
+
+  &__head {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #228DDD;
+
+    @media screen and (min-width: 768px) {
+      font-size: 26px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 2;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__button {
+    margin-left: calc(64px - 20px);
+
+    @media screen and (min-width: 768px) {
+      margin-left: 2px;
+    }
   }
 }
 
