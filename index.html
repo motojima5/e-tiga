@@ -16,6 +16,9 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap"
     rel="stylesheet">
 
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
   <!-- CSS -->
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -139,7 +142,92 @@
       </div>
     </div>
 
+    <section class="case-study">
+      <div class="case-study__inner">
+        <div class="case-study__title">
+          <h2 class="title">
+            <span class="title__en">CASESTUDY</span>
+            <span class="title__ja">お客様の声</span>
+          </h2>
+        </div>
+        <div class="case-study__slider">
+          <!-- Slider main container -->
+          <div id="js-case-study-swiper" class="swiper case-study__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide case-study__slide">
+                <div class="case-study-card">
+                  <div class="case-study-card__image"><img src="./img/card-1-img.png" alt=""></div>
+                  <div class="case-study-card__content">
+                    <h3 class="case-study-card__title">在宅でも団結したチームワークに。</h3>
+                    <div class="case-study-card__name">〇〇株式会社<span>吉本様</span></div>
+                    <div class="case-study-card__industry">情報通信業</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide case-study__slide">
+                <div class="case-study-card">
+                  <div class="case-study-card__image"><img src="./img/card-2-img.png" alt=""></div>
+                  <div class="case-study-card__content">
+                    <h3 class="case-study-card__title">1日2時間分の処理時間の削減に成功</h3>
+                    <div class="case-study-card__name">〇〇株式会社<span>竹内様</span></div>
+                    <div class="case-study-card__industry">情報通信業</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide case-study__slide">
+                <div class="case-study-card">
+                  <div class="case-study-card__image"><img src="./img/card-3-img.png" alt=""></div>
+                  <div class="case-study-card__content">
+                    <h3 class="case-study-card__title">導入から1年で残業0へ。</h3>
+                    <div class="case-study-card__name">〇〇株式会社<span>三島様</span></div>
+                    <div class="case-study-card__industry">情報通信業</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide case-study__slide">
+                <div class="case-study-card">
+                  <div class="case-study-card__image"><img src="./img/card-4-img.png" alt=""></div>
+                  <div class="case-study-card__content">
+                    <h3 class="case-study-card__title">請求書処理が4日から1日に短縮。</h3>
+                    <div class="case-study-card__name">〇〇株式会社<span>本田様</span></div>
+                    <div class="case-study-card__industry">製造業</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide case-study__slide">
+                <div class="case-study-card">
+                  <div class="case-study-card__image"><img src="./img/card-5-img.png" alt=""></div>
+                  <div class="case-study-card__content">
+                    <h3 class="case-study-card__title">会議時間を50％カット。</h3>
+                    <div class="case-study-card__name">〇〇株式会社<span>野口様</span></div>
+                    <div class="case-study-card__industry">物流業</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide case-study__slide">
+                <div class="case-study-card">
+                  <div class="case-study-card__image"><img src="./img/card-6-img.png" alt=""></div>
+                  <div class="case-study-card__content">
+                    <h3 class="case-study-card__title">新人の定着率が向上。</h3>
+                    <div class="case-study-card__name">〇〇株式会社<span>斎藤様</span></div>
+                    <div class="case-study-card__industry">人材サービス業</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div id="js-case-study-pagination" class="swiper-pagination case-study__pagination"></div>
 
+          </div>
+          <!-- If we need navigation buttons -->
+          <div id="js-case-study-prev" class="swiper-button-prev case-study__prev"></div>
+          <div id="js-case-study-next" class="swiper-button-next case-study__next"></div>
+        </div>
+        <div class="case-study__button"><a href="#">全てみる</a></div>
+      </div>
+    </section>
 
     <section class="price">
       <div class="price__inner">
@@ -410,19 +498,22 @@
               <span class="qanda-box__head-icon">Q</span>
               <span class="qanda-box__head-text">ここにテキストが入ります。</span>
             </summary>
-            <div class="qanda-box__body">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</div>
+            <div class="qanda-box__body">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+            </div>
           </details>
           <details class="qanda__box qanda-box">
             <summary class="qanda-box__head">
               <span class="qanda-box__head-icon">Q</span>
               <span class="qanda-box__head-text">ここにテキストが入ります。</span>
             </summary>
-            <div class="qanda-box__body">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</div>
+            <div class="qanda-box__body">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+            </div>
           </details>
           <details class="qanda__box qanda-box">
             <summary class="qanda-box__head">
               <span class="qanda-box__head-icon">Q</span>
-              <span class="qanda-box__head-text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</span>
+              <span
+                class="qanda-box__head-text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</span>
             </summary>
             <div class="qanda-box__body">ここにテキストが入ります。</div>
           </details>
@@ -431,7 +522,8 @@
               <span class="qanda-box__head-icon">Q</span>
               <span class="qanda-box__head-text">ここにテキストが入ります。</span>
             </summary>
-            <div class="qanda-box__body">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</div>
+            <div class="qanda-box__body">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+            </div>
           </details>
         </div>
       </div>
@@ -470,6 +562,7 @@
     </footer>
 
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="./js/script.js"></script>
 </body>
