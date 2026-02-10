@@ -646,6 +646,7 @@ body {
     max-width: 300px;
 
     &:nth-child(n + 2) {
+
       .price-card__price::before,
       .price-card__price::after {
         position: absolute;
@@ -654,10 +655,12 @@ body {
         line-height: $line-height-base;
         color: #333;
       }
+
       .price-card__price::before {
         content: "月";
         left: -19px;
       }
+
       .price-card__price::after {
         content: "円";
         right: -21px;
@@ -1004,6 +1007,167 @@ body {
       color: #2392DB;
       border: 1px solid currentColor;
       border-radius: 2px;
+    }
+  }
+}
+
+// footer
+.footer {
+  padding: 46px 0 15px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(90deg, #2390DC 0%, #2BC8C8 100%);
+
+  @media screen and (min-width: 768px) {
+    padding: 60px 0 11px;
+  }
+
+  &__inner {
+    padding: 0 15px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 1092px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding: 0 40px;
+    }
+  }
+
+  &__container {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &__accesses {
+    font-size: 14px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 4px;
+      text-align: left;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 160px;
+    }
+  }
+
+  &__access {
+    font-weight: 500;
+
+    &--address {
+      margin-top: 25px;
+
+      @media screen and (min-width: 768px) {
+        margin-top: 17px;
+      }
+    }
+
+    &--tel {
+      margin-top: 2px;
+    }
+
+    &--fax {
+      margin-top: 2px;
+
+      @media screen and (min-width: 768px) {
+        margin-top: 1px;
+      }
+    }
+  }
+
+
+  &__menus {
+    margin-top: 35px;
+    margin-right: 8px;
+    font-size: 14px;
+    font-weight: 500;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+      margin-left: 78px;
+      margin-right: 0;
+      text-align: left;
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      gap: 50px;
+    }
+  }
+
+  &__menu {
+    font-weight: 500;
+
+    &:nth-child(n + 2) {
+      margin-top: 10px;
+
+      @media screen and (min-width: 1024px) {
+        position: relative;
+        margin-top: 0;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -25px;
+          width: 1px;
+          height: 16px;
+          background: #fff;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    &--contact {}
+
+    &--policy {}
+
+    &--specified-commercial-transactions-act {}
+  }
+
+
+  &__sns {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 36px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+      margin-left: 87px;
+    }
+  }
+
+  &__twitter,
+  &__facebook,
+  &__instagram {
+    a {
+      display: block;
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      border-radius: 50%;
+    }
+  }
+
+  &__copyright {
+    margin-top: 41px;
+    line-height: normal;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 62px;
+    }
+
+    small {
+      font-size: 12px;
+      font-weight: 500;
     }
   }
 }
