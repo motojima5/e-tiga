@@ -11,6 +11,11 @@ $bg-gradation: linear-gradient(90deg, #2390DC 0%, #2BC8C8 100%);
 /*---------------------
 // 共通
 ---------------------*/
+:root {
+  // 固有のサイズキーワードのアニメーションとトランジションを許可する
+  interpolate-size: allow-keywords;
+}
+
 body {
   font-size: $font-size-base;
   font-family: $font-family-ja;
@@ -189,6 +194,7 @@ body {
     width: 100%;
     height: auto;
     background: none;
+    transform: none;
   }
 
   @media screen and (min-width: 1024px) {
@@ -1060,6 +1066,152 @@ body {
       color: #2392DB;
       border: 1px solid currentColor;
       border-radius: 2px;
+    }
+  }
+}
+
+// qanda
+.qanda {
+  padding: 60px 0;
+  background: #F4FBFF;
+
+  @media screen and (min-width: 768px) {
+    padding: 100px 0 121px;
+  }
+
+  &__inner {
+    padding: 0 15px;
+
+    @media screen and (min-width: 768px) {
+      margin: 0 auto;
+      max-width: calc(800px + 15px * 2);
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding-bottom: calc(2px + 3px);
+    font-size: 36px;
+    font-weight: bold;
+    font-family: $font-family-en;
+    letter-spacing: 0.1em;
+    color: #238FDC;
+    text-align: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 60px;
+      height: 3px;
+      background: #2BC8C8;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__boxes {
+    margin-top: 46px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__box {}
+}
+
+.qanda-box {
+  &::details-content {
+    overflow: clip;
+    block-size: 0;
+    transition-duration: 0.3s;
+    transition-property: content-visibility, block-size;
+    transition-behavior: allow-discrete;
+  }
+
+  &[open] {
+    .qanda-box__head {
+      &::after {
+        transform: translateY(-50%) rotate(0);
+      }
+    }
+
+    &::details-content {
+      block-size: unset;
+    }
+  }
+
+  &__head {
+    position: relative;
+    display: flex;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: 2px;
+      background: #2392DB;
+      border-radius: 1px;
+    }
+
+    &::before {
+      right: 10px;
+      width: 20px;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      right: calc(10px + (20px - 18.04px) / 2);
+      width: 18.04px;
+      transform: translateY(-50%) rotate(-90deg);
+      transition: transform 0.3s;
+    }
+
+    &-icon {
+      flex-shrink: 0;
+      display: grid;
+      align-items: center;
+      padding: 7px 15px 13px 14px;
+      font-size: 26px;
+      font-weight: bold;
+      line-height: 1;
+      color: #fff;
+      background: #238FDC;
+      border-radius: 10px 0 0 10px;
+
+      @media screen and (min-width: 768px) {
+        padding: 10px 25px 15px;
+      }
+    }
+
+    &-text {
+      flex-grow: 1;
+      padding: 10px 42px 10px 10px;
+      font-size: 15px;
+      background: #fff;
+      border-radius: 0 10px 10px 0;
+
+      @media screen and (min-width: 768px) {
+        padding: 12px 55px 12px 14px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__body {
+    margin-top: 12px;
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 10px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 6px;
+      margin-left: 41px;
+      padding: 12px 14px;
+      font-size: 16px;
     }
   }
 }

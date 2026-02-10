@@ -2,6 +2,10 @@
 /*---------------------
 // 共通
 ---------------------*/
+:root {
+  interpolate-size: allow-keywords;
+}
+
 body {
   font-size: 16px;
   font-family: "Noto Sans JP", sans-serif;
@@ -161,6 +165,7 @@ body.is-fixed {
     width: 100%;
     height: auto;
     background: none;
+    transform: none;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -955,6 +960,133 @@ body.is-fixed {
   color: #2392DB;
   border: 1px solid currentColor;
   border-radius: 2px;
+}
+
+.qanda {
+  padding: 60px 0;
+  background: #F4FBFF;
+}
+@media screen and (min-width: 768px) {
+  .qanda {
+    padding: 100px 0 121px;
+  }
+}
+.qanda__inner {
+  padding: 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .qanda__inner {
+    margin: 0 auto;
+    max-width: 830px;
+  }
+}
+.qanda__title {
+  position: relative;
+  padding-bottom: 5px;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.1em;
+  color: #238FDC;
+  text-align: center;
+}
+.qanda__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 60px;
+  height: 3px;
+  background: #2BC8C8;
+  transform: translateX(-50%);
+}
+.qanda__boxes {
+  margin-top: 46px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.qanda-box::details-content {
+  overflow: clip;
+  block-size: 0;
+  transition-duration: 0.3s;
+  transition-property: content-visibility, block-size;
+  transition-behavior: allow-discrete;
+}
+.qanda-box[open] .qanda-box__head::after {
+  transform: translateY(-50%) rotate(0);
+}
+.qanda-box[open]::details-content {
+  block-size: unset;
+}
+.qanda-box__head {
+  position: relative;
+  display: flex;
+}
+.qanda-box__head::before, .qanda-box__head::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background: #2392DB;
+  border-radius: 1px;
+}
+.qanda-box__head::before {
+  right: 10px;
+  width: 20px;
+  transform: translateY(-50%);
+}
+.qanda-box__head::after {
+  right: 10.98px;
+  width: 18.04px;
+  transform: translateY(-50%) rotate(-90deg);
+  transition: transform 0.3s;
+}
+.qanda-box__head-icon {
+  flex-shrink: 0;
+  display: grid;
+  align-items: center;
+  padding: 7px 15px 13px 14px;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  background: #238FDC;
+  border-radius: 10px 0 0 10px;
+}
+@media screen and (min-width: 768px) {
+  .qanda-box__head-icon {
+    padding: 10px 25px 15px;
+  }
+}
+.qanda-box__head-text {
+  flex-grow: 1;
+  padding: 10px 42px 10px 10px;
+  font-size: 15px;
+  background: #fff;
+  border-radius: 0 10px 10px 0;
+}
+@media screen and (min-width: 768px) {
+  .qanda-box__head-text {
+    padding: 12px 55px 12px 14px;
+    font-size: 16px;
+  }
+}
+.qanda-box__body {
+  margin-top: 12px;
+  margin-left: 20px;
+  padding: 10px;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .qanda-box__body {
+    margin-top: 6px;
+    margin-left: 41px;
+    padding: 12px 14px;
+    font-size: 16px;
+  }
 }
 
 .footer {
