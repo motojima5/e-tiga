@@ -384,7 +384,7 @@ body {
   font-weight: bold;
   letter-spacing: 3px;
   color: #2392DB;
-  border: 1px solid #2392DB;
+  border: 1px solid currentColor;
   border-radius: 2px;
 }
 
@@ -657,6 +657,40 @@ body {
 .price-card__button {
   margin-top: 30px;
   margin-left: 6px;
+}
+
+.cv {
+  padding: 60px 0;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(90deg, #2390DC 0%, #2BC8C8 100%);
+}
+@media screen and (min-width: 768px) {
+  .cv {
+    padding: 80px 0 79px;
+  }
+}
+.cv__lead {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+.cv__text {
+  margin-top: 8px;
+  letter-spacing: 0.1em;
+}
+.cv__button {
+  margin-top: 17px;
+}
+.cv__button a {
+  display: inline-block;
+  padding: 7px 52px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #F6F7F7;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  box-shadow: 4px 3px 26px 0 rgba(0, 0, 0, 0.1608);
 }
 
 .blog {
