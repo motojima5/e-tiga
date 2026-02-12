@@ -636,12 +636,14 @@ body {
 .case-study {
   padding: 60px 0;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     padding: 100px 0 60px;
   }
 
   &__inner {
-    @media screen and (min-width: 768px) {
+    position: relative;
+
+    @media screen and (min-width: 1024px) {
       margin: 0 auto;
       padding-left: 40px;
       padding-right: 40px;
@@ -663,10 +665,10 @@ body {
   }
 
   &__slider {
-    position: relative;
+    // position: relative;
     margin-top: 50px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
       margin-top: 40px;
       margin-left: auto;
       margin-right: auto;
@@ -679,7 +681,7 @@ body {
     padding-left: 20px;
     padding-right: 20px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
       padding-bottom: calc(45px + 12px);
       padding-left: 0;
       padding-right: 0;
@@ -712,10 +714,10 @@ body {
   &__next {
     width: 44px;
     height: 44px;
-    margin-top: -43px !important;
+    margin-top: -12px !important;
 
-    @media screen and (min-width: 768px) {
-      margin-top: -49px !important;
+    @media screen and (min-width: 1024px) {
+      margin-top: -34px !important;
     }
 
     &::after {
@@ -731,8 +733,8 @@ body {
     left: 12px !important;
     background: url(../img/prev.png) no-repeat center center / contain;
 
-    @media screen and (min-width: 768px) {
-      left: -62px !important;
+    @media screen and (min-width: 1024px) {
+      left: 40px !important;
     }
   }
 
@@ -740,8 +742,8 @@ body {
     right: 10px !important;
     background: url(../img/next.png) no-repeat center center / contain;
 
-    @media screen and (min-width: 768px) {
-      right: -62px !important;
+    @media screen and (min-width: 1024px) {
+      right: 40px !important;
     }
   }
 

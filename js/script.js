@@ -13,7 +13,7 @@ const swiper = new Swiper("#js-case-study-swiper", {
   width: 360,
 
   breakpoints: {
-    768: {
+    1024: {
       width: 320,
     },
   },
