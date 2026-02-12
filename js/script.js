@@ -38,3 +38,23 @@ jQuery(".company__tab a").on("click", function () {
   jQuery(this).addClass("current");
   return false;
 });
+
+jQuery('#js-drawer-menu a[href^="#"]').on("click", function (e) {
+  jQuery("#js-drawer-icon").removeClass("is-checked");
+  jQuery("#js-drawer-menu").removeClass("is-checked");
+  jQuery("body").removeClass("is-fixed");
+});
+
+jQuery('a[href^="#"]').on("click", function (e) {
+  const speed = 1000;
+  const id = jQuery(this).attr("href");
+  const target = jQuery("#" == id ? "html" : id);
+  const position = jQuery(target).offset().top;
+  jQuery("html, body").animate(
+    {
+      scrollTop: position,
+    },
+    speed,
+    "swing", // swing or linear
+  );
+});
