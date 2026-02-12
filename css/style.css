@@ -68,6 +68,11 @@ body.is-fixed {
   background: linear-gradient(90deg, #2188DE 0%, #2BCBC6 100%);
   border-radius: 48px;
   box-shadow: 4px 3px 26px 0 rgba(0, 0, 0, 0.1608);
+  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s, border 0.3s;
+}
+.button:hover {
+  color: #2188DE;
+  background: #fff;
 }
 
 .header__outer {
@@ -228,6 +233,10 @@ body.is-fixed {
     font-size: 16px;
     font-weight: 500;
     color: #333;
+    transition: color 0.3s;
+  }
+  .gnav__link:hover {
+    color: #2082df;
   }
   .gnav__link.is-active::before {
     content: "";
@@ -412,6 +421,11 @@ body.is-fixed {
   color: #2392DB;
   border: 1px solid currentColor;
   border-radius: 2px;
+  transition: color 0.3s, background-color 0.3s;
+}
+.news__link a:hover {
+  color: #fff;
+  background-color: #2392DB;
 }
 
 .news-link {
@@ -426,6 +440,10 @@ body.is-fixed {
     align-items: center;
     gap: 30px;
     padding: 12px 0;
+    transition: background-color 0.3s;
+  }
+  .news-link:hover {
+    background-color: rgba(34, 141, 221, 0.3);
   }
 }
 .news-link:first-child {
@@ -477,7 +495,7 @@ body.is-fixed {
     margin: 0;
   }
 }
-.pagination__prev, .pagination__num, .pagination__next {
+.pagination__prev a, .pagination__num a, .pagination__next a {
   width: 36px;
   display: flex;
   justify-content: center;
@@ -485,18 +503,34 @@ body.is-fixed {
   aspect-ratio: 1;
   background: #fff;
   border: 1px solid #828282;
+  transition: color 0.3s, background 0.3s, border 0.3s;
 }
-.pagination__num {
+.pagination__prev a:hover, .pagination__num a:hover, .pagination__next a:hover {
+  background: #228DDD;
+  border: 1px solid #228DDD;
+}
+.pagination__prev a path, .pagination__next a path {
+  stroke: #828282;
+}
+.pagination__prev a:hover path, .pagination__next a:hover path {
+  stroke: #fff;
+}
+.pagination__num a {
   font-size: 18px;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   line-height: 1;
   color: #707070;
 }
-.pagination__num.pagination__num--current {
+.pagination__num a:hover {
+  color: #fff;
+}
+.pagination__num.pagination__num--current a {
   color: #fff;
   background: #228DDD;
+  border: 1px solid #228DDD;
 }
+
 .concept {
   padding: 60px 0;
   background: #F4FBFF;
@@ -694,12 +728,23 @@ body.is-fixed {
   border: 1px solid currentColor;
   border-radius: 2px;
   box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 0.1608);
+  transition: color 0.3s, background-color 0.3s;
+}
+.case-study__button a:hover {
+  color: #fff;
+  background-color: #2392DB;
 }
 
 .case-study-card {
   background: #fff;
   border-radius: 4px;
   box-shadow: 5px 7px 34px 0 #f1f1f1;
+}
+.case-study-card__link {
+  transition: opacity 0.3s;
+}
+.case-study-card__link:hover {
+  opacity: 0.7;
 }
 .case-study-card__image img {
   width: 320px;
@@ -939,6 +984,14 @@ body.is-fixed {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: color 0.3s, background 0.3s;
+  }
+  .company__tab a:hover {
+    color: #fff;
+    background: #2392db;
+  }
+  .company__tab a:hover svg path {
+    stroke: #fff;
   }
 }
 .company__tab a.current {
@@ -1175,6 +1228,11 @@ body.is-fixed {
   border: 2px solid #fff;
   border-radius: 50px;
   box-shadow: 4px 3px 26px 0 rgba(0, 0, 0, 0.1608);
+  transition: color 0.3s, background-color 0.3s;
+}
+.cv__button a:hover {
+  color: #2390DC;
+  background-color: #fff;
 }
 
 .blog {
@@ -1262,6 +1320,12 @@ body.is-fixed {
   .blog__item {
     margin: 0 auto;
   }
+}
+.blog__link {
+  transition: opacity 0.3s;
+}
+.blog__link:hover {
+  opacity: 0.7;
 }
 .blog__thumb {
   position: relative;
@@ -1433,6 +1497,11 @@ body.is-fixed {
   color: #2392DB;
   border: 1px solid currentColor;
   border-radius: 2px;
+  transition: color 0.3s, background-color 0.3s;
+}
+.seminar-box__button a:hover {
+  color: #fff;
+  background-color: #2392DB;
 }
 
 .qanda {
@@ -1495,6 +1564,7 @@ body.is-fixed {
 .qanda-box__head {
   position: relative;
   display: flex;
+  cursor: pointer;
 }
 .qanda-box__head::before, .qanda-box__head::after {
   content: "";
@@ -1648,8 +1718,12 @@ body.is-fixed {
     gap: 50px;
   }
 }
-.footer__menu {
+.footer__menu a {
   font-weight: 500;
+  transition: opacity 0.3s;
+}
+.footer__menu a:hover {
+  opacity: 0.7;
 }
 .footer__menu:nth-child(n+2) {
   margin-top: 10px;

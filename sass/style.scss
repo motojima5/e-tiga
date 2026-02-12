@@ -79,6 +79,13 @@ body {
   background: linear-gradient(90deg, #2188DE 0%, #2BCBC6 100%);
   border-radius: 48px;
   box-shadow: 4px 3px 26px 0 rgba(0, 0, 0, 16.08%);
+  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s, border 0.3s;
+
+  &:hover {
+    color: #2188DE;
+    background: #fff;
+    // box-shadow: none;
+  }
 }
 
 // header
@@ -259,6 +266,11 @@ body {
       font-size: 16px;
       font-weight: 500;
       color: #333;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #2082df;
+      }
 
       &.is-active::before {
         content: "";
@@ -455,6 +467,12 @@ body {
       color: #2392DB;
       border: 1px solid currentColor;
       border-radius: 2px;
+      transition: color 0.3s, background-color 0.3s;
+
+      &:hover {
+        color: #fff;
+        background-color: #2392DB;
+      }
     }
   }
 }
@@ -470,6 +488,11 @@ body {
     align-items: center;
     gap: 30px;
     padding: 12px 0;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba($color: #228DDD, $alpha: 0.3);
+    }
   }
 
   &:first-child {
@@ -525,34 +548,58 @@ body {
   &__prev,
   &__num,
   &__next {
-    width: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    aspect-ratio: 1;
-    background: #fff;
-    border: 1px solid #828282;
-  }
+    a {
+      width: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1;
+      background: #fff;
+      border: 1px solid #828282;
+      transition: color 0.3s, background 0.3s, border 0.3s;
 
-  &__prev {
-    &-path {}
-  }
-
-  &__num {
-    font-size: 18px;
-    font-weight: 500;
-    font-family: $font-family-en;
-    line-height: 1;
-    color: #707070;
-
-    &.pagination__num--current {
-      color: #fff;
-      background: #228DDD;
+      &:hover {
+        background: #228DDD;
+        border: 1px solid #228DDD;
+      }
     }
   }
 
+  &__prev,
   &__next {
-    &-path {}
+    a {
+      path {
+        stroke: #828282;
+      }
+
+      &:hover {
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+  }
+
+  &__num {
+    a {
+      font-size: 18px;
+      font-weight: 500;
+      font-family: $font-family-en;
+      line-height: 1;
+      color: #707070;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &.pagination__num--current {
+      a {
+        color: #fff;
+        background: #228DDD;
+        border: 1px solid #228DDD;
+      }
+    }
   }
 }
 
@@ -764,6 +811,12 @@ body {
       border: 1px solid currentColor;
       border-radius: 2px;
       box-shadow: 4px 3px 26px 0px rgba(0, 0, 0, 16.08%);
+      transition: color 0.3s, background-color 0.3s;
+
+      &:hover {
+        color: #fff;
+        background-color: #2392DB;
+      }
     }
   }
 }
@@ -772,6 +825,14 @@ body {
   background: #fff;
   border-radius: 4px;
   box-shadow: 5px 7px 34px 0 #f1f1f1;
+
+  &__link {
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 
   &__image {
     img {
@@ -1039,6 +1100,18 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: color 0.3s, background 0.3s;
+
+        &:hover {
+          color: #fff;
+          background: #2392db;
+
+          svg {
+            path {
+              stroke: #fff;
+            }
+          }
+        }
       }
 
       &.current {
@@ -1314,6 +1387,12 @@ body {
       border: 2px solid #fff;
       border-radius: 50px;
       box-shadow: 4px 3px 26px 0 rgba($color: #000000, $alpha: 16.08%);
+      transition: color 0.3s, background-color 0.3s;
+
+      &:hover {
+        color: #2390DC;
+        background-color: #fff;
+      }
     }
   }
 }
@@ -1400,6 +1479,14 @@ body {
 
     @media screen and (min-width: 768px) {
       margin: 0 auto;
+    }
+  }
+
+  &__link {
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 
@@ -1591,6 +1678,12 @@ body {
       color: #2392DB;
       border: 1px solid currentColor;
       border-radius: 2px;
+      transition: color 0.3s, background-color 0.3s;
+
+      &:hover {
+        color: #fff;
+        background-color: #2392DB;
+      }
     }
   }
 }
@@ -1669,6 +1762,7 @@ body {
   &__head {
     position: relative;
     display: flex;
+    cursor: pointer;
 
     &::before,
     &::after {
@@ -1833,7 +1927,14 @@ body {
   }
 
   &__menu {
-    font-weight: 500;
+    a {
+      font-weight: 500;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
 
     &:nth-child(n + 2) {
       margin-top: 10px;

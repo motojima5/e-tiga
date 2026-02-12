@@ -48,13 +48,16 @@ jQuery('#js-drawer-menu a[href^="#"]').on("click", function (e) {
 jQuery('a[href^="#"]').on("click", function (e) {
   const speed = 1000;
   const id = jQuery(this).attr("href");
-  const target = jQuery("#" == id ? "html" : id);
-  const position = jQuery(target).offset().top;
-  jQuery("html, body").animate(
-    {
-      scrollTop: position,
-    },
-    speed,
-    "swing", // swing or linear
-  );
+  if (id == "#tab1" || id == "#tab2" || id == "#tab3") {
+  } else {
+    const target = jQuery("#" == id ? "html" : id);
+    const position = jQuery(target).offset().top;
+    jQuery("html, body").animate(
+      {
+        scrollTop: position,
+      },
+      speed,
+      "swing", // swing or linear
+    );
+  }
 });
