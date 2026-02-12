@@ -15,7 +15,7 @@ const swiper = new Swiper("#js-case-study-swiper", {
   breakpoints: {
     768: {
       width: 320,
-    }
+    },
   },
 
   // If we need pagination
@@ -28,4 +28,13 @@ const swiper = new Swiper("#js-case-study-swiper", {
     nextEl: "#js-case-study-next",
     prevEl: "#js-case-study-prev",
   },
+});
+
+jQuery('#contents > div[id != "tab1"]').hide();
+jQuery(".company__tab a").on("click", function () {
+  jQuery("#contents > div").hide();
+  jQuery(jQuery(this).attr("href")).show();
+  jQuery(".current").removeClass("current");
+  jQuery(this).addClass("current");
+  return false;
 });
